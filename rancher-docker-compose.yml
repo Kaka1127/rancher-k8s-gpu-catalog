@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  rancher:
+    image: rancher/server:v1.6.29
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/rancher/data:/var/lib/rancher
+    restart: unless-stopped
+    container_name: rancher
